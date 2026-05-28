@@ -31,7 +31,7 @@ const payin = await genuka.payins.create({
 });
 ```
 
-By default, the SDK targets `https://staging-api-pay.genuka.com`. Pass `baseUrl` to use another environment.
+By default, the SDK targets `https://api-pay.genuka.com`. Pass `baseUrl` to use another environment.
 
 ## Authentication
 

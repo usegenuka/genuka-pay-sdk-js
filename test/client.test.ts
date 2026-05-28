@@ -80,7 +80,7 @@ test("payins.list signs query string path", async () => {
   assert.equal(calls[0]?.init.body, undefined);
 });
 
-test("client uses staging API base URL by default", async () => {
+test("client uses API base URL by default", async () => {
   const calls: Array<{ url: string; init: RequestInit }> = [];
 
   const fetcher: typeof fetch = async (url, init) => {
@@ -100,5 +100,5 @@ test("client uses staging API base URL by default", async () => {
 
   await client.payins.list();
 
-  assert.equal(calls[0]?.url, "https://staging-api-pay.genuka.com/api/v1/payments");
+  assert.equal(calls[0]?.url, "https://api-pay.genuka.com/api/v1/payments");
 });

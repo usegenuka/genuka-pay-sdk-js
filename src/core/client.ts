@@ -2,7 +2,7 @@ import { GenukaApiError } from "@/core/errors";
 import { normalizePath, signRequest } from "@/core/signing";
 import type { GenukaClientConfig, HttpMethod, RequestOptions } from "@/types";
 
-const DEFAULT_BASE_URL = "https://staging-api-pay.genuka.com";
+const DEFAULT_BASE_URL = "https://api-pay.genuka.com";
 
 type InternalRequestOptions = RequestOptions & {
   method: HttpMethod;

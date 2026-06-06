@@ -1,0 +1,48 @@
+Copyright (c) 2026 Genuka SAS. All rights reserved.
+
+PROPRIETARY SOFTWARE LICENSE
+
+This software and associated documentation files (the "Software") are the
+exclusive property of Genuka SAS ("Genuka") and are protected by copyright
+law and international treaties.
+
+GRANT OF LICENSE
+
+Genuka grants you a limited, non-exclusive, non-transferable, revocable
+license to use this Software solely for the purpose of integrating with the
+Genuka Pay API in connection with your authorized Genuka Pay merchant account.
+
+RESTRICTIONS
+
+You may not, and you may not permit others to:
+
+  1. Copy, modify, adapt, translate, or create derivative works of the Software;
+  2. Distribute, sell, sublicense, rent, lease, or lend the Software to any
+     third party;
+  3. Reverse engineer, disassemble, decompile, or otherwise attempt to derive
+     the source code of the Software (except to the extent permitted by
+     applicable law);
+  4. Remove or alter any proprietary notices, labels, or marks on the Software;
+  5. Use the Software for any purpose other than integration with the
+     Genuka Pay API.
+
+TERMINATION
+
+This license is effective until terminated. Your rights under this license
+will terminate automatically without notice if you fail to comply with any
+of its terms. Upon termination, you must destroy all copies of the Software
+in your possession.
+
+DISCLAIMER OF WARRANTIES
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL
+GENUKA BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+CONTACT
+
+For licensing inquiries: legal@genuka.com
+Genuka SAS — https://genuka.com

@@ -1,6 +1,6 @@
 {
   "name": "@genuka/pay-sdk",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Server-side TypeScript SDK for the Genuka Pay API.",
   "type": "module",
   "packageManager": "pnpm@10.33.2",
@@ -14,13 +14,17 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
     "test": "node --test --import tsx --import tsconfig-paths/register test/*.test.ts",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm build && changeset publish"
   },
   "keywords": [
     "genuka",
@@ -28,13 +32,14 @@
     "mobile-money",
     "sdk"
   ],
-  "license": "UNLICENSED",
+  "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
-    "@types/node": "^22.10.0",
-    "tsup": "^8.3.5",
+    "@changesets/cli": "^2.31.0",
+    "@types/node": "^22.19.20",
     "tsconfig-paths": "^4.2.0",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.2"
+    "tsup": "^8.5.1",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.3"
   },
   "engines": {
     "node": ">=22.13"

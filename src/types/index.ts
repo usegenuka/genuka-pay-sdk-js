@@ -4,6 +4,14 @@ export type Currency = string;
 
 export type E164PhoneNumber = `+${string}`;
 
+export type TransactionStatus =
+  | "initiated"
+  | "processing"
+  | "success"
+  | "failed"
+  | "cancelled"
+  | "refunded";
+
 export type GenukaClientConfig = {
   baseUrl?: string;
   publicKey: string;
@@ -27,15 +35,22 @@ export type PayinCreatePayload = {
   payer_phone: E164PhoneNumber;
   operator_code?: string;
   external_id?: string;
-  metadata?: Record<string, unknown>;
+  metadata?: {
+    description?: string;
+    customer_name?: string;
+    [key: string]: unknown;
+  };
 };
 
 export type PayoutCreatePayload = {
   amount: number;
   currency: Currency;
   country?: string;
+  /** Required if payment_method_id is not provided */
   recipient_phone?: E164PhoneNumber;
+  /** Required if payment_method_id is not provided */
   operator_code?: string;
+  /** Use a saved payment method instead of recipient_phone + operator_code */
   payment_method_id?: string;
   recipient_first_name?: string;
   recipient_last_name?: string;
@@ -62,6 +77,53 @@ export type GenukaResponse<TData> = {
   data?: TData;
 };
 
-export type Payin = Record<string, unknown>;
-export type Payout = Record<string, unknown>;
-export type HostedCheckout = Record<string, unknown>;
+export type Payin = {
+  id: string;
+  track_id: string;
+  amount: number;
+  currency: Currency;
+  status: TransactionStatus;
+  payer_phone?: string;
+  operator_code?: string;
+  external_id?: string;
+  idempotency_key?: string;
+  provider_fee_amount?: number;
+  genuka_fee_amount?: number;
+  total_fee_amount?: number;
+  net_amount?: number;
+  metadata?: Record<string, unknown>;
+  created_at: string;
+  updated_at: string;
+};
+
+export type Payout = {
+  id: string;
+  amount: number;
+  currency: Currency;
+  status: TransactionStatus;
+  recipient_phone?: string;
+  operator_code?: string;
+  external_id?: string;
+  description?: string;
+  metadata?: Record<string, unknown>;
+  created_at: string;
+  updated_at: string;
+};
+
+export type HostedCheckout = {
+  id: string;
+  amount: number;
+  currency: Currency;
+  status: TransactionStatus;
+  description?: string;
+  payer_name?: string;
+  payer_email?: string;
+  payer_phone?: string;
+  return_url?: string;
+  cancel_url?: string;
+  expires_at?: string;
+  checkout_url?: string;
+  metadata?: Record<string, unknown>;
+  created_at: string;
+  updated_at: string;
+};
